@@ -1,0 +1,14 @@
+name: Greetings
+description: Greet someone with a Vulcan phrase
+inputs:
+  who-to-greet:
+    description: The person to greet
+    required: true
+runs:
+  using: composite
+  steps:
+    - name: Greet
+      shell: bash
+      env:
+        WHO_TO_GREET: ${{ inputs.who-to-greet }}
+      run: printf 'Live long and prosper, %s!\n' "$WHO_TO_GREET"
