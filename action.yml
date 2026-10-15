@@ -11,4 +11,4 @@ runs:
       shell: bash
       env:
         WHO_TO_GREET: ${{ inputs.who-to-greet }}
-      run: printf 'Live long and prosper, %s!\n' "$WHO_TO_GREET"
+      run: printf 'Live long and prosper, %s 🖖\n' "$WHO_TO_GREET"
